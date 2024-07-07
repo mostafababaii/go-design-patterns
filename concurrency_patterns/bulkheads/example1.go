@@ -13,7 +13,6 @@ func simulateRequest(name string, delay time.Duration, wg *sync.WaitGroup) {
 	fmt.Printf("Service %s responded in %v\n", name, delay)
 }
 
-// main is the entry point of the application.
 func main() {
 	var wg sync.WaitGroup
 	// Define the number of concurrent requests each service can handle.
