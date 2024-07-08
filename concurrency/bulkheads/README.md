@@ -1,5 +1,5 @@
 
-## Bulkheads Pattern in Golang
+# Bulkheads Pattern
 
 The **Bulkheads pattern** in Golang is a design principle used to improve system resilience and fault tolerance. It is named after the watertight compartments on ships, known as bulkheads, which prevent flooding from spreading throughout the vessel.
 
