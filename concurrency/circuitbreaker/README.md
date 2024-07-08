@@ -12,7 +12,7 @@ The Circuit Breaker pattern is implemented using a state machine with three stat
 2. Open: In this state, the circuit breaker blocks all requests to the downstream service and returns an error to the client. After a configured timeout, the circuit breaker transitions to the half-open state.
 3. Half-Open: In this state, the circuit breaker allows a limited number of requests to pass through to the downstream service. If these requests succeed, the circuit breaker transitions back to the closed state. If they fail, the circuit breaker transitions back to the open state.
 
-Real-World Example
+Production Example
 ------------------
 
 Imagine you are building a web application that relies on a third-party payment processing service. If the payment processing service experiences an outage or high latency, your application may become unresponsive or fail completely. To prevent this, you can implement the Circuit Breaker pattern.
@@ -21,7 +21,7 @@ In this scenario, the Circuit Breaker would be implemented as a proxy between yo
 
 After a configured timeout, the Circuit Breaker would transition to the half-open state and allow a limited number of requests to pass through to the payment processing service. If these requests succeed, the Circuit Breaker would transition back to the closed state, allowing all requests to pass through. If they fail, the Circuit Breaker would transition back to the open state, blocking all requests until the payment processing service recovers.
 
-Another Real-World Example
+Real-World Example
 ------------------
 
 A real-world analogy for the Circuit Breaker pattern is the electrical circuit breaker in our homes. When there is an overload or a short circuit, the electrical circuit breaker 'trips', cutting off the flow of electricity to prevent damage to the electrical system and potential fire hazards. After addressing the issue, the circuit breaker can be reset to restore the electrical flow.
